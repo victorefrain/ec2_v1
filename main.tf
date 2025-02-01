@@ -80,7 +80,6 @@ resource "aws_security_group" "lb_sg" {
   }
 }
 
-
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.example.id
 
@@ -98,4 +97,10 @@ resource "aws_route_table_association" "public1" {
 resource "aws_route_table_association" "public2" {
   subnet_id      = aws_subnet.example2.id
   route_table_id = aws_route_table.public.id
+}
+
+
+
+resource "aws_internet_gateway" "example" {
+  vpc_id = aws_vpc.example.id
 }

@@ -4,6 +4,8 @@ resource "aws_instance" "webserver" {
   subnet_id     = var.subnet_id
   security_groups = [var.security_group_id]
 
+  user_data = templatefile("${path.module}/install_webserver.sh", {})
+
   tags = {
     Name = "webserver"
   }
