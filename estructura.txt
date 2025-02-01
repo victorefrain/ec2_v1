@@ -1,0 +1,17 @@
+project
+│   main.tf
+│   variables.tf
+│   outputs.tf
+├───modules
+│   ├───bastion
+│   │   │   main.tf
+│   │   │   variables.tf
+│   │   │   outputs.tf
+│   ├───mongodb
+│   │   │   main.tf
+│   │   │   variables.tf
+│   │   │   outputs.tf
+│   └───webserver
+│       │   main.tf
+│       │   variables.tf
+│       │   outputs.tf
