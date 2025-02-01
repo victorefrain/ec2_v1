@@ -40,3 +40,10 @@ module "webserver" {
   subnet_id = module.network.private_subnet_id
   security_group_id = module.security.webserver_sg_id
 }
+
+module "load_balancer" {
+  source = "./modules/load_balancer"
+  security_group_id = aws_security_group.lb_sg.id
+  subnet_ids        = [aws_subnet.example1.id, aws_subnet.example2.id]
+  vpc_id            = aws_vpc.example.id
+}
