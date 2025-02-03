@@ -50,3 +50,7 @@ resource "aws_lb_target_group" "example" {
   }
 }
 
+
+output "target_group_arn" {
+  value = aws_lb_target_group.example.arn
+}

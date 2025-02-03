@@ -39,6 +39,7 @@ module "webserver" {
   ami = var.ami
   subnet_id = module.network.private_subnet_id
   security_group_id = module.security.webserver_sg_id
+  target_group_arn = module.load_balancer.target_group_arn
 }
 
 module "load_balancer" {

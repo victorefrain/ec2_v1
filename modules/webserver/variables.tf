@@ -13,3 +13,8 @@ variable "subnet_id" {
 variable "security_group_id" {
   description = "Security group ID for web server"
 }
+
+variable "target_group_arn" {
+  description = "The ARN of the target group"
+  type        = string
+}
